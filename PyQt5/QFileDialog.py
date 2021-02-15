@@ -27,7 +27,7 @@ class MyApp(QMainWindow):
         self.show()
 
     def showDialog(self):
-        fname=QFileDialog.getOpenFileName(self, "파일 열기", "./") # 열기 창 타이틀, 기본 경로
+        fname=QFileDialog.getExistingDirectory(self, "파일 열기", "./") # 열기 창 타이틀, 기본 경로
 
         if fname[0]:
             f=open(fname[0], 'r')
